@@ -1,0 +1,36 @@
+{
+  "name": "wait-lock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zaid-AlOmari/wait-lock"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --p src/tsconfig.json",
+    "test": "cd test; ../node_modules/.bin/tsc -p .; NODE_ENV=test ../node_modules/.bin/nyc ../node_modules/.bin/mocha '../dist-test/**/*.spec.js'"
+  },
+  "author": "Zaid Al-Omari",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.2",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "@tsconfig/node18": "^1.0.0",
+    "@types/node": "^20.9.3",
+    "@types/sinon": "^7.5.0",
+    "chai": "^4.2.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.0.1",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "source-map-support": "^0.5.19"
+  },
+  "dependencies": {}
+}
